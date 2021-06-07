@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html,
+body,
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Roboto", sans-serif;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: #edeef2;
+  padding-bottom: 10rem;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.site-header > div {
+  padding-right: 0.25rem;
+}
+
+.site-header > div > p {
+  font-size: 0.8rem;
+  color: #404040;
+  padding: 0.35rem;
+}
+
+.forgot-pw {
+  color: blue !important;
+}
+
+.sign-in-btn,
+.create-account-btn {
+  display: flex;
+  flex-direction: row;
+  border: black 1px solid;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  padding: 0.5rem 1.5rem;
+  vertical-align: middle;
+  /* font-weight: bold; */
+  display: inline-flex;
+  align-items: center;
+}
+
+.create-account-btn {
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sign-in-btn > p {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.sign-in-btn > img,
+.create-account-btn > img {
+  height: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.intuit-logo {
+  width: 118px;
+  height: 35px;
+  background-image: url(images/intuitAssetPack.png);
+  padding-bottom: 1rem;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+}
+
+.mint {
+  width: 68px;
+  height: 25px;
+  background-image: url(images/intuitAssetPack.png);
+  background-position: 310px 27px;
+}
+
+.quickbooks {
+  width: 128px;
+  height: 25px;
+  background-image: url(images/intuitAssetPack.png);
+  background-position: 448px 27px;
+  margin: 0 0.6rem;
+}
+
+.turbotax {
+  width: 103px;
+  height: 25px;
+  background-image: url(images/intuitAssetPack.png);
+  background-position: 562px 27px;
+}
+
+.boxed-content {
+  border: 2px solid rgb(199, 199, 199);
+  border-bottom: none;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  width: 30%;
+}
+
+.boxed-content > div {
+  padding-bottom: 1.5rem;
+}
+
+.boxed-content > div > h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.boxed-content > div > p {
+  color: #404040;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.learn-more {
+  color: blue !important;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > label {
+  padding-bottom: 0.5rem;
+}
+
+form > input {
+  padding: 0.5rem;
+  border: rgb(199, 199, 199) 2px solid;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0 none;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset, 0 0 8px rgb(82 168 236 / 60%);
+}
+
+form > p {
+  font-size: 0.7rem;
+  position: relative;
+  top: -1rem;
+  padding-bottom: 1rem;
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  color: #757575;
+  font-style: italic;
+}
+
+.terms span {
+  color: blue;
+}
+
+.reCAPTCHA {
+  background-color: #edeef2;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 2rem;
+  border: 2px solid rgb(199, 199, 199);
+  border-top: none;
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.reCAPTCHA > p > span {
+  color: blue;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.legal > ul > li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.legal > p {
+  padding: 0.25rem;
+}
