@@ -102,6 +102,7 @@ body {
   justify-content: center;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  border: none;
 }
 
 .sign-in-btn > p {
@@ -183,7 +184,6 @@ body {
   color: #404040;
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 300;
 }
 
 .learn-more {
@@ -208,6 +208,49 @@ form > input {
   margin-bottom: 1.5rem;
 }
 
+[for="email"]:active::after,
+[for="email"]:hover::after {
+  content: "You'll use this as your user ID";
+  position: relative;
+  color: white;
+  background-color: rgb(59, 59, 59);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  top: 2rem;
+  right: -22rem;
+  font-size: 0.9rem;
+}
+
+[for="phone"]:active::after,
+[for="phone"]:hover::after {
+  /* content: "We strongly recommend adding a phone number. This will help verify tour account and keep it safe"; */
+  content: "";
+  background-image: url(images/phone-message.png);
+  position: relative;
+  color: orange;
+  display: block;
+  width: 80%;
+  height: 2rem;
+  top: 0rem;
+  z-index: 10;
+}
+
+[for="pw"]:active::after,
+[for="pw"]:hover::after {
+  /* content: "Create a password you've never used before. This will help leep your account safe"; */
+  content: "";
+  background-image: url(images/password-message);
+  background-repeat: no-repeat;
+  position: relative;
+  color: orange;
+  display: block;
+  width: 80%;
+  height: 5rem;
+  top: 0rem;
+  z-index: 10;
+}
+
 input:focus {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0 none;
@@ -226,6 +269,11 @@ form > p {
   flex-direction: column;
   color: #757575;
   font-style: italic;
+  font-size: 0.75rem;
+}
+
+.terms > p {
+  font-size: 0.9rem !important;
 }
 
 .terms span {
