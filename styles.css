@@ -193,61 +193,80 @@ body {
 }
 
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
-form > label {
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div > label {
   padding-bottom: 0.5rem;
 }
 
-form > input {
+form > div > input {
   padding: 0.5rem;
   border: rgb(199, 199, 199) 2px solid;
   border-radius: 5px;
   margin-bottom: 1.5rem;
 }
 
-[for="email"]:active::after,
-[for="email"]:hover::after {
+.email-div:active::after,
+.email-div:hover::after {
   content: "You'll use this as your user ID";
-  position: relative;
+  position: absolute;
   color: white;
   background-color: rgb(59, 59, 59);
   padding: 1rem 2rem;
   border-radius: 10px;
   text-align: center;
-  top: 2rem;
-  right: -22rem;
+  top: 1.5rem;
+  right: -18rem;
   font-size: 0.9rem;
 }
 
-[for="phone"]:active::after,
-[for="phone"]:hover::after {
+[type="tel"]:hover {
+  border: 2px solid orange;
+}
+
+.phone-div:active::after,
+.phone-div:hover::after {
   /* content: "We strongly recommend adding a phone number. This will help verify tour account and keep it safe"; */
   content: "";
   background-image: url(images/phone-message.png);
-  position: relative;
+  position: absolute;
   color: orange;
   display: block;
   width: 80%;
   height: 2rem;
-  top: 0rem;
+  top: 9.5rem;
   z-index: 10;
 }
 
-[for="pw"]:active::after,
-[for="pw"]:hover::after {
+.pw-div:hover {
+  margin-bottom: 5rem;
+}
+
+[type="password"]:hover {
+  border: 2px solid red;
+}
+
+.pw-div:active::after,
+.pw-div:hover::after {
   /* content: "Create a password you've never used before. This will help leep your account safe"; */
   content: "";
   background-image: url(images/password-message);
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
   color: orange;
   display: block;
   width: 80%;
   height: 5rem;
-  top: 0rem;
+  /* top: 0rem; */
+  bottom: 5rem;
   z-index: 10;
 }
 
@@ -257,7 +276,7 @@ input:focus {
   box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset, 0 0 8px rgb(82 168 236 / 60%);
 }
 
-form > p {
+form > div > p {
   font-size: 0.7rem;
   position: relative;
   top: -1rem;
